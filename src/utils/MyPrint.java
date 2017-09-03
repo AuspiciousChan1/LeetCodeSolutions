@@ -48,15 +48,15 @@ public class MyPrint {
         myPrint(o, "-", "=", 100);
     }
     //（1.2.2）带有固定标题和固定分隔线的输出
-    public static void myPrint(String title, Object o, String top, String middle, String bottom, int minLen){
+    public static void myPrint(Object o, String title, String top, String middle, String bottom, int minLen){
         myPrint(title, top, middle, minLen);
         String finalEnd = DataGenerator.StringcCentipede(bottom, (int) Math.ceil((double)minLen/bottom.length()));
         finalEnd = "\n" + finalEnd + "\n";
         print(o, finalEnd);
     }
     //(1.2.2.1)
-    public static void myPrint(String title, Object o){
-        MyPrint.myPrint(title, o, "-", ".", "=", 100);
+    public static void myPrint(Object o, String title){
+        MyPrint.myPrint(o, title, "-", ".", "=", 100);
     }
 
 
@@ -69,7 +69,20 @@ public class MyPrint {
         print(l.get(len - 1), "\n");
     }
 
-    public static void printList(List l,int amountEachRow, String seperator){
+    public static String sprintList(List l, String seperator){
+        if(l == null || l.size() == 0){
+            return "";
+        }
+        StringBuffer stringBuffer = new StringBuffer();
+        int len = l.size();
+        for (int i = 0; i < len - 1; i++){
+            stringBuffer.append(l.get(i).toString()).append(seperator);
+        }
+        stringBuffer.append(l.get(l.size() - 1).toString());
+        return stringBuffer.toString();
+    }
+
+    public static void printList(List l, String seperator, int amountEachRow){
         int len = l.size();
         for (int i = 0; i < len - 1; i++){
             if((i+1) % amountEachRow == 0){

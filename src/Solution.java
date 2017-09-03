@@ -1,14 +1,28 @@
 import org.omg.PortableInterceptor.INACTIVE;
 import utils.MyPrint;
+import utils.Search;
 import utils.Sort;
 import utils.TypeConverter;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Solution {
+    //1.Two Sum
+    //Accepted
+    public int[] twoSum(int[] nums, int target) {
+        int[] res = new int[2];
+        for(int i = 0; i < nums.length - 1; i++){
+            for(int j = i+1; j < nums.length; j++){
+                if(nums[i] + nums[j] == target){
+                    res[0] = i;
+                    res[1] = j;
+                    return res;
+                }
+            }
+        }
+        return res;
+    }
+    //------------------------------------------------------------------------------------------------------------------
     //15. 3Sum
     //Time Limit Exceeded
     public List<List<Integer>> threeSum(int[] nums) {
@@ -42,13 +56,12 @@ public class Solution {
                             result.add(list);
                         }
                         MyPrint.printList(result.get(result.size() - 1), "    ");
-//                        list.clear();
-//                        MyPrint.printList(result.get(0), "    ");
                     }
                 }
             }
         }
         return result;
     }
+    //==================================================================================================================
 
 }
