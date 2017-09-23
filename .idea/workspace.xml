@@ -13,11 +13,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="230">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -25,15 +25,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="-175">
+              <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#twoSum#0;class#Solution#0" expanded="false" />
+                <element signature="class#ListNode#0;class#Solution#0" expanded="false" />
+                <element signature="method#addEle#0;class#Solution#0" expanded="false" />
+                <element signature="method#addTwoNumbers#0;class#Solution#0" expanded="false" />
+                <element signature="method#addTwoNumbers_Solution#0;class#Solution#0" expanded="false" />
+                <element signature="method#lengthOfLongestSubstring#0;class#Solution#0" expanded="false" />
                 <element signature="method#threeSum#0;class#Solution#0" expanded="false" />
+                <element signature="e#4926#4941#0" expanded="true" />
+                <element signature="e#5306#5315#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,24 +49,10 @@
       <file leaf-file-name="Sort.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Sort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="124" column="5" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="124" selection-end-column="5" />
+            <state relative-caret-position="93">
+              <caret line="31" column="91" lean-forward="true" selection-start-line="31" selection-start-column="91" selection-end-line="31" selection-end-column="91" />
               <folding>
                 <element signature="method#bubleSort#0;class#Sort#0" expanded="false" />
-                <element signature="e#215#223#0" expanded="true" />
-                <element signature="method#quickSort#0;class#Sort#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/Search.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding>
-                <element signature="method#getMedian#0;class#Search#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -78,7 +71,7 @@
       <file leaf-file-name="TypeConverter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/TypeConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
+            <state relative-caret-position="479">
               <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -94,8 +87,6 @@
               <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
                 <element signature="method#myPrint#0;class#MyPrint#0" expanded="false" />
                 <element signature="method#myPrint#2;class#MyPrint#0" expanded="false" />
                 <element signature="method#printList#0;class#MyPrint#0" expanded="false" />
@@ -134,10 +125,10 @@
         <option value="$PROJECT_DIR$/src/utils/DataGenerator.java" />
         <option value="$PROJECT_DIR$/src/utils/TypeConverter.java" />
         <option value="$PROJECT_DIR$/src/utils/MyPrint.java" />
-        <option value="$PROJECT_DIR$/src/utils/Sort.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/utils/Search.java" />
+        <option value="$PROJECT_DIR$/src/utils/Sort.java" />
         <option value="$PROJECT_DIR$/src/Solution.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -148,10 +139,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="x" value="331" />
+    <option name="y" value="62" />
+    <option name="width" value="751" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -169,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -218,6 +208,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -646,38 +637,39 @@
       <workItem from="1504279318712" duration="409000" />
       <workItem from="1504365979312" duration="5105000" />
       <workItem from="1504410914437" duration="14660000" />
+      <workItem from="1506176083687" duration="8495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32279000" />
+    <option name="totallyTimeSpent" value="40774000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="331" y="62" width="751" height="744" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838038" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761577" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14751287" sideWeight="0.5180897" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39970282" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14751287" sideWeight="0.4819103" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16251831" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24384788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3989726" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2058319" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -694,7 +686,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -703,6 +695,87 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Sort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2852">
+          <caret line="124" column="5" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="124" selection-end-column="5" />
+          <folding>
+            <element signature="method#bubleSort#0;class#Sort#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="method#getMedian#0;class#Search#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/DataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/TypeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/MyPrint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#myPrint#0;class#MyPrint#0" expanded="false" />
+            <element signature="method#myPrint#2;class#MyPrint#0" expanded="false" />
+            <element signature="method#printList#0;class#MyPrint#0" expanded="false" />
+            <element signature="method#printList#1;class#MyPrint#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#twoSum#0;class#Solution#0" expanded="false" />
+            <element signature="class#ListNode#0;class#Solution#0" expanded="false" />
+            <element signature="method#addEle#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers_Solution#0;class#Solution#0" expanded="false" />
+            <element signature="method#lengthOfLongestSubstring#0;class#Solution#0" expanded="false" />
+            <element signature="method#threeSum#0;class#Solution#0" expanded="false" />
+            <element signature="e#4926#4941#0" expanded="true" />
+            <element signature="e#5306#5315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -720,7 +793,14 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#twoSum#0;class#Solution#0" expanded="false" />
+            <element signature="class#ListNode#0;class#Solution#0" expanded="false" />
+            <element signature="method#addEle#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers_Solution#0;class#Solution#0" expanded="false" />
+            <element signature="method#lengthOfLongestSubstring#0;class#Solution#0" expanded="false" />
             <element signature="method#threeSum#0;class#Solution#0" expanded="false" />
+            <element signature="e#4926#4941#0" expanded="true" />
+            <element signature="e#5306#5315#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -759,9 +839,10 @@
           <caret line="71" column="40" lean-forward="true" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
             <element signature="method#myPrint#0;class#MyPrint#0" expanded="false" />
             <element signature="method#myPrint#2;class#MyPrint#0" expanded="false" />
+            <element signature="method#printList#0;class#MyPrint#0" expanded="false" />
+            <element signature="method#printList#1;class#MyPrint#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -772,8 +853,6 @@
           <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="method#bubleSort#0;class#Sort#0" expanded="false" />
-            <element signature="e#215#223#0" expanded="true" />
-            <element signature="method#quickSort#0;class#Sort#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -794,8 +873,6 @@
           <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding>
             <element signature="method#bubleSort#0;class#Sort#0" expanded="false" />
-            <element signature="e#215#223#0" expanded="true" />
-            <element signature="method#quickSort#0;class#Sort#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,9 +901,10 @@
           <caret line="79" column="13" lean-forward="false" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
             <element signature="method#myPrint#0;class#MyPrint#0" expanded="false" />
             <element signature="method#myPrint#2;class#MyPrint#0" expanded="false" />
+            <element signature="method#printList#0;class#MyPrint#0" expanded="false" />
+            <element signature="method#printList#1;class#MyPrint#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -838,7 +916,14 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#twoSum#0;class#Solution#0" expanded="false" />
+            <element signature="class#ListNode#0;class#Solution#0" expanded="false" />
+            <element signature="method#addEle#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers_Solution#0;class#Solution#0" expanded="false" />
+            <element signature="method#lengthOfLongestSubstring#0;class#Solution#0" expanded="false" />
             <element signature="method#threeSum#0;class#Solution#0" expanded="false" />
+            <element signature="e#4926#4941#0" expanded="true" />
+            <element signature="e#5306#5315#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -859,8 +944,6 @@
           <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding>
             <element signature="method#bubleSort#0;class#Sort#0" expanded="false" />
-            <element signature="e#215#223#0" expanded="true" />
-            <element signature="method#quickSort#0;class#Sort#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -889,9 +972,10 @@
           <caret line="79" column="13" lean-forward="false" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
             <element signature="method#myPrint#0;class#MyPrint#0" expanded="false" />
             <element signature="method#myPrint#2;class#MyPrint#0" expanded="false" />
+            <element signature="method#printList#0;class#MyPrint#0" expanded="false" />
+            <element signature="method#printList#1;class#MyPrint#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -903,7 +987,14 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#twoSum#0;class#Solution#0" expanded="false" />
+            <element signature="class#ListNode#0;class#Solution#0" expanded="false" />
+            <element signature="method#addEle#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers_Solution#0;class#Solution#0" expanded="false" />
+            <element signature="method#lengthOfLongestSubstring#0;class#Solution#0" expanded="false" />
             <element signature="method#threeSum#0;class#Solution#0" expanded="false" />
+            <element signature="e#4926#4941#0" expanded="true" />
+            <element signature="e#5306#5315#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -912,29 +1003,10 @@
     <entry file="jar://D:/JavaSEDevelopmentKit/src.zip!/java/util/AbstractSequentialList.java" />
     <entry file="jar://D:/JavaSEDevelopmentKit/src.zip!/java/util/AbstractList.java" />
     <entry file="jar://D:/JavaSEDevelopmentKit/src.zip!/java/util/List.java" />
-    <entry file="file://$PROJECT_DIR$/src/utils/DataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/TypeConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/JDK/jre/lib/rt.jar!/sun/nio/cs/UTF_8.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,14 +1018,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/JDK/src.zip!/java/util/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3535">
+          <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/TypeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/MyPrint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
             <element signature="method#myPrint#0;class#MyPrint#0" expanded="false" />
             <element signature="method#myPrint#2;class#MyPrint#0" expanded="false" />
             <element signature="method#printList#0;class#MyPrint#0" expanded="false" />
@@ -962,33 +1049,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/JDK/src.zip!/java/util/Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3535">
-          <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
-          <folding>
-            <element signature="e#4151#4396#0" expanded="false" />
-            <element signature="e#4395#4396#0" expanded="false" />
-            <element signature="e#4798#4799#0" expanded="false" />
-            <element signature="e#4845#4846#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Search.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="253">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="method#getMedian#0;class#Search#0" expanded="false" />
           </folding>
@@ -997,24 +1061,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Sort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="124" column="5" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="124" selection-end-column="5" />
+        <state relative-caret-position="93">
+          <caret line="31" column="91" lean-forward="true" selection-start-line="31" selection-start-column="91" selection-end-line="31" selection-end-column="91" />
           <folding>
             <element signature="method#bubleSort#0;class#Sort#0" expanded="false" />
-            <element signature="e#215#223#0" expanded="true" />
-            <element signature="method#quickSort#0;class#Sort#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/DataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="-175">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#twoSum#0;class#Solution#0" expanded="false" />
+            <element signature="class#ListNode#0;class#Solution#0" expanded="false" />
+            <element signature="method#addEle#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers#0;class#Solution#0" expanded="false" />
+            <element signature="method#addTwoNumbers_Solution#0;class#Solution#0" expanded="false" />
+            <element signature="method#lengthOfLongestSubstring#0;class#Solution#0" expanded="false" />
             <element signature="method#threeSum#0;class#Solution#0" expanded="false" />
+            <element signature="e#4926#4941#0" expanded="true" />
+            <element signature="e#5306#5315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
