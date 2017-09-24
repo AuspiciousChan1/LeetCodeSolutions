@@ -156,6 +156,58 @@ public class Solution {
 
 
     //------------------------------------------------------------------------------------------------------------------
+    //5. Longest Palindromic Substring
+    private int maxStart, maxEnd;
+    private void getMax(int i0, int i, String s){
+        if(i0 != -1){
+            int front = i0, back = i;
+            while (--front >= 0 && ++back < s.length() && s.charAt(front) == s.charAt(back));
+            if(front < 0){
+                front = 0;
+            }
+            else if(back >= s.length()){
+                front++;
+                back--;
+            }
+            else{
+                front++;
+                back--;
+            }
+            if(back + 1 - front > maxEnd - maxStart){
+                maxStart = front;
+                maxEnd = back + 1;
+            }
+        }
+    }
+    public String longestPalindrome(String s) {
+        if(s.length() <= 1){
+            return s;
+        }
+
+        maxStart = 0;
+        maxEnd = 1;
+        char[] cs = new char[1005];
+        if(s.charAt(0) ==s.charAt(1)){
+            maxStart = 0;
+            maxEnd = 2;
+        }
+        for(int i = 2; i < s.length(); i++){
+            char c = s.charAt(i);
+            int i0 = -1;
+            if(s.charAt(i) == s.charAt(i - 2)){
+                i0 = i - 2;
+                getMax(i0, i, s);
+            }
+            if(s.charAt(i) == s.charAt(i - 1)){
+                i0 = i - 1;
+                getMax(i0, i, s);
+            }
+        }
+        return s.substring(maxStart, maxEnd);
+    }
+    //==================================================================================================================
+
+    //------------------------------------------------------------------------------------------------------------------
     //15. 3Sum
     //Time Limit Exceeded
     public List<List<Integer>> threeSum(int[] nums) {
