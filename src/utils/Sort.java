@@ -4,9 +4,33 @@ import java.util.*;
 
 public class Sort {
 
+
+    public static<T> boolean isOrdered(List<Double> l){
+        if(l == null){
+            throw new NullPointerException("Input \"l\" is null");
+        }
+        int len = l.size();
+        switch (len){
+            case 1:
+                return true;
+            default:
+                Iterator<Double> iterator = l.iterator();
+                double form = iterator.next();
+                while (iterator.hasNext()){
+                    double d = iterator.next();
+                    if(form > d){
+                        return false;
+                    }
+                    form = d;
+                }
+                return true;
+        }
+
+    }
+    //冒泡排序
     //没有引用其他自建函数
-    public static List<Double> bubleSort(Collection<Double> c)throws NullPointerException{
-        LinkedList<Double> lList = new LinkedList<Double>();
+    public static LinkedList<Double> bubleSort(Collection<Double> c)throws NullPointerException{
+        LinkedList<Double> lList = new LinkedList<>();
         while (!c.isEmpty()){
             Iterator<Double> iterator = c.iterator();
             double min = iterator.next();
@@ -26,11 +50,31 @@ public class Sort {
         return lList;
 
     }
-    //没写完
-    //引用Search中的函数
+
+    //快速排序
+    private static double getKeyForQuickSort(List<Double> l, int start, int end){
+        double a = l.get(start);
+        double b = l.get((start + end) / 2);
+        double c = l.get(end - 1);
+        if(a > b){
+            double t = a;
+            a = b;
+            b = t;
+        }
+        if(c < a){
+
+            return a;
+        }
+        else if(c > b){
+            return b;
+        }
+        else {
+            return c;
+        }
+    }
+    //引用函数getKeyForQuickSort
     public static List<Double> quickSort(List<Double> l){
         int len = l.size();
-//        MyPrint.println("len = " + len);
         if(len < 2){
             return l;
         }
@@ -80,7 +124,7 @@ public class Sort {
         }
         int frontIndex = 0;
         int backIndex = len - 1;
-        double key = Search.getMedian(l.get(frontIndex), l.get((frontIndex + backIndex) / 2), l.get(backIndex));
+        double key = getKeyForQuickSort(l, frontIndex, backIndex + 1);
 //        MyPrint.myPrint("key : " + key);
         int f = frontIndex, b = backIndex;
         while (f <= backIndex){
@@ -105,15 +149,17 @@ public class Sort {
             }
             b--;
         }
-        List<Double> l0 = new ArrayList<>();
+        List<Double> l0 = l.subList(0, frontIndex);
+        /*List<Double> l0 = new ArrayList<>();
         Iterator<Double> iterator = l.iterator();
         for(int i = 0; i < frontIndex; i++){
             l0.add(iterator.next());
-        }
-        List<Double> l1 = new ArrayList<>();
+        }*/
+        List<Double> l1 = l.subList(frontIndex, l.size());
+        /*List<Double> l1 = new ArrayList<>();
         while (iterator.hasNext()){
             l1.add(iterator.next());
-        }
+        }*/
         List<Double> l00 = quickSort(l0);
         List<Double> l11 = quickSort(l1);
         List<Double> result = new ArrayList<>();
