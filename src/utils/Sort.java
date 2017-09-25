@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Sort {
 
+<<<<<<< HEAD
 
     public static<T> boolean isOrdered(List<Double> l){
         if(l == null){
@@ -27,6 +28,8 @@ public class Sort {
         }
 
     }
+=======
+>>>>>>> f9d126dcf890131e98e48a031c194e7f36ef0634
     //冒泡排序
     //没有引用其他自建函数
     public static LinkedList<Double> bubleSort(Collection<Double> c)throws NullPointerException{
@@ -50,6 +53,7 @@ public class Sort {
         return lList;
 
     }
+<<<<<<< HEAD
 
     //快速排序
     private static double getKeyForQuickSort(List<Double> l, int start, int end){
@@ -168,5 +172,10 @@ public class Sort {
         result.addAll(l11);
         return result;
 //        return l;
+=======
+    //没写完
+    public static List<Double> quickSort()throws UnsupportedOperationException{
+        throw new UnsupportedOperationException("\"quickSort\" has not been finished yet");
+>>>>>>> f9d126dcf890131e98e48a031c194e7f36ef0634
     }
 }

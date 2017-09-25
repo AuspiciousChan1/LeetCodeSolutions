@@ -1,7 +1,11 @@
 import org.w3c.dom.NodeList;
 import utils.DataGenerator;
 import utils.MyPrint;
+<<<<<<< HEAD
 import utils.Search;
+=======
+import utils.Outputs;
+>>>>>>> f9d126dcf890131e98e48a031c194e7f36ef0634
 import utils.Sort;
 
 import java.sql.Connection;
@@ -11,9 +15,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class Main {
 
+public class Main {
     public static void main(String[] args) {
+<<<<<<< HEAD
         int num = 1;
         int falseAmount = 0;
         while (num-- > 0){
@@ -31,5 +36,10 @@ public class Main {
             }
         }
         MyPrint.print(falseAmount);
+=======
+        Solution solution = new Solution();
+        boolean x = solution.isPalindrome(0);
+        Outputs.myOutput(x, "x");
+>>>>>>> f9d126dcf890131e98e48a031c194e7f36ef0634
     }
 }
