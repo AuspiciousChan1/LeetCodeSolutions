@@ -1,9 +1,6 @@
 import org.omg.PortableInterceptor.INACTIVE;
 import org.w3c.dom.NodeList;
-import utils.MyPrint;
-import utils.Search;
-import utils.Sort;
-import utils.TypeConverter;
+import utils.*;
 
 import java.util.*;
 
@@ -130,7 +127,7 @@ public class Solution {
 
     //------------------------------------------------------------------------------------------------------------------
     //3. Longest Substring Without Repeating Characters
-    //Working
+    //Accepted
     public int lengthOfLongestSubstring(String s) {
         HashMap<Character, Integer> hashMap = new HashMap<>();
         int start = 0, end = 0;
@@ -157,6 +154,7 @@ public class Solution {
 
     //------------------------------------------------------------------------------------------------------------------
     //5. Longest Palindromic Substring
+    //Accepted
     private int maxStart, maxEnd;
     private void getMax(int i0, int i, String s){
         if(i0 != -1){
@@ -207,6 +205,155 @@ public class Solution {
     }
     //==================================================================================================================
 
+
+    //------------------------------------------------------------------------------------------------------------------
+    //6. ZigZag Conversion
+    //Accepted
+    private static int getRow(int index, int numRows){
+        if (numRows == 1){
+            return 0;
+        }
+        else if (numRows == 2){
+            return index % 2;
+        }
+        else if(numRows > 2){
+            int rem = index % (2 * numRows - 2);
+            if(rem >= numRows){
+                rem = 2 * numRows - rem - 2;
+            }
+            return rem;
+        }
+        return -1;
+    }
+    public String convert(String s, int numRows) {
+        ArrayList<String> listArrayList = new ArrayList<>(numRows);
+        for(int i = 0; i < numRows; i++){
+            listArrayList.add("");
+        }
+        for(int i = 0; i < s.length(); i++){
+            listArrayList.set(getRow(i, numRows), listArrayList.get(getRow(i, numRows)) + s.charAt(i));
+        }
+        StringBuilder rep = new StringBuilder();
+        for (String str :
+                listArrayList) {
+            rep.append(str);
+        }
+        return rep.toString();
+    }
+    //==================================================================================================================
+
+
+    //------------------------------------------------------------------------------------------------------------------
+    //7. Reverse Integer
+    public int reverse(int x) {
+        boolean isNegative = x < 0;
+        Stack<Integer> stack = new Stack<>();
+        int rev = 0;
+        while (x / 10 != 0){
+            stack.push(x % 10);
+            x /= 10;
+        }
+        stack.push(x);
+        int power = 0;
+        while (!stack.empty()){
+            if(power == 9 && stack.peek() > 2){
+                return 0;
+            }
+            rev += stack.pop() * Math.round(Math.pow(10, power++));
+
+        }
+        if (isNegative ^ rev<0){
+            return 0;
+        }
+        return rev;
+    }
+    //==================================================================================================================
+
+
+    //------------------------------------------------------------------------------------------------------------------
+    //8. String to Integer (atoi)
+    private String removeFrontSpaces(String str){
+        int start = 0;
+        for(int i = 0; i < str.length(); i++){
+            if(str.charAt(i) == ' '){
+                start++;
+            }
+            else {
+                break;
+            }
+        }
+        return str.substring(start);
+    }
+    public int myAtoi(String str) {
+        if (str == null){
+            return 0;
+        }
+        else {
+            boolean isNegative = false;
+            Stack<Integer> stack = new Stack<>();
+            //去掉开头的空格，这样第一位（index = 0）就是符号（+、-）或者数字了。
+            str = removeFrontSpaces(str);
+            for(int i = 0; i < str.length(); i++){
+                //如果是数字，则加入栈中（此处不用考虑位数，如果前面都是0，多少位都没关系）
+                if(str.charAt(i) >= '0' && str.charAt(i) <= '9'){
+                    stack.push(str.charAt(i) - '0');
+                }
+                //开头遇到负号，说明为负数
+                else if(i == 0 && str.charAt(0) == '-'){
+                    isNegative = true;
+                }
+                //开头遇到正号，说明为正数
+                else if(i == 0 && str.charAt(0) == '+'){
+                }
+                else {
+                    break;
+                }
+            }
+            if (stack.size() == 0){
+                return 0;
+            }
+            int power = 0;
+            int rem = 0;
+            boolean over = false;
+            while (!stack.empty()){
+                if(power == 9 && stack.peek() > 2){
+                    over = true;
+                }
+                else if(power > 9 && stack.peek() != 0){
+                    over = true;
+                }
+                rem += stack.pop() * Math.round(Math.pow(10, power++));
+            }
+
+            //如果超出范围
+            if(rem < 0 || over){
+                return isNegative ? -2147483648 : 2147483647;//小于0则取-2^31；大于0则取2^31-1
+            }
+            //在范围内，则加上符号返回。
+            return isNegative ? -rem : rem;
+        }
+    }
+    //==================================================================================================================
+
+
+    //------------------------------------------------------------------------------------------------------------------
+    //9. Palindrome Number
+    //Accepted
+    public boolean isPalindrome(int x) {
+        String str = x + "";
+        int len = str.length();
+        int i, j = len;
+        for (i = 0; i < len / 2; i ++){
+            j--;
+            if(str.charAt(i) != str.charAt(j)){
+                return false;
+            }
+        }
+        return true;
+    }
+    //==================================================================================================================
+
+
     //------------------------------------------------------------------------------------------------------------------
     //15. 3Sum
     //Time Limit Exceeded
@@ -240,7 +387,7 @@ public class Solution {
                         if(set.add(TypeConverter.roundDoubleList(Sort.bubleSort(TypeConverter.IntegerList_To_DoubleList(list))))){
                             result.add(list);
                         }
-                        MyPrint.printList(result.get(result.size() - 1), "    ");
+                        Outputs.outputList(result.get(result.size() - 1), "    ");
                     }
                 }
             }
