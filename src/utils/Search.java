@@ -35,7 +35,7 @@ public class Search {
         int end = l.size();
         while (end - start > 0){
             int mid = (start + end)/2;
-            MyPrint.print(start + " " + mid + " " + end + "\n");
+            Outputs.output(start + " " + mid + " " + end + "\n");
             try {
                 if(target > l.get(mid)){
                     start = mid + 1;

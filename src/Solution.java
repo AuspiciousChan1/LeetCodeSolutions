@@ -358,45 +358,7 @@ public class Solution {
     //15. 3Sum
     //Time Limit Exceeded
     public List<List<Integer>> threeSum(int[] nums) {
-<<<<<<< HEAD
         throw new UnsupportedOperationException("This function has not been finished!");
-=======
-        int len = nums.length;
-        List<List<Integer>> result = new LinkedList<List<Integer>>();
-        for(int i = 0; i < len-2; i++){
-            for(int j = i+1; j < len-1; j++){
-                for(int k = j+1; k < len; k++){
-                    if(nums[i] + nums[j] + nums[k] == 0){
-                        Set<List<Integer>> set = new HashSet<>();
-                        set.addAll(result);
-                        List<Integer> list = new LinkedList<Integer>();
-                        list.add(nums[i]);
-                        if(nums[j] < nums[i]){
-                            list.add(0, nums[j]);
-                        }
-                        else {
-                            list.add(nums[j]);
-                        }
-                        if(nums[k] < list.get(0)){
-                            list.add(0, nums[k]);
-                        }
-                        else if (nums[k] < list.get(1)){
-                            list.add(1, nums[k]);
-                        }
-                        else {
-                            list.add(2, nums[k]);
-                        }
-
-                        if(set.add(TypeConverter.roundDoubleList(Sort.bubleSort(TypeConverter.IntegerList_To_DoubleList(list))))){
-                            result.add(list);
-                        }
-                        Outputs.outputList(result.get(result.size() - 1), "    ");
-                    }
-                }
-            }
-        }
-        return result;
->>>>>>> f9d126dcf890131e98e48a031c194e7f36ef0634
     }
     //==================================================================================================================
 
