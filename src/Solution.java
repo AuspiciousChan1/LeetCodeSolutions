@@ -1,7 +1,10 @@
+import com.sun.deploy.util.ArrayUtil;
+import com.sun.xml.internal.fastinfoset.util.CharArrayIntMap;
 import org.omg.PortableInterceptor.INACTIVE;
 import org.w3c.dom.NodeList;
 import utils.*;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Solution {
@@ -353,12 +356,286 @@ public class Solution {
     }
     //==================================================================================================================
 
+    //------------------------------------------------------------------------------------------------------------------
+    //11. Container With Most Water
+    //Accepted
+    public int maxArea(int[] height) {
+        int maxS = 0;
+        int begin = 0;
+        int end = height.length - 1;
+        while (begin < end){
+            int s = (end - begin) * Math.min(height[begin], height[end]);
+            maxS = maxS > s ? maxS : s;
+            if(height[begin] < height[end]){
+                int b = height[begin];
+                while (begin < end && height[++begin] <= b);
+            }
+            else {
+                int e = height[end];
+                while (begin < end && height[--end] <= e);
+            }
+        }
+        return maxS;
+    }
+    //==================================================================================================================
+
+    //------------------------------------------------------------------------------------------------------------------
+    //12. Integer to Roman
+    /*Given an integer, convert it to a roman numeral.
+    Input is guaranteed to be within the range from 1 to 3999.*/
+    private String getRoman(String one, String five, String ten, int num){
+        String roman = "";
+        if(num < 4){
+            while (num-- > 0){
+                roman += one;
+            }
+        }
+        else if (num ==4){
+            roman = one + five;
+        }
+        else if(num < 9){
+            roman += five;
+            while (num-- > 5){
+                roman += one;
+            }
+        }
+        else {
+            roman += one;
+            roman += ten;
+        }
+        return roman;
+    }
+    public String intToRoman(int num) {
+        int ones = num % 10;
+        int tens = (num / 10) % 10;
+        int hundreds = (num / 100) % 10;
+        int thousands = (num / 1000) % 10;
+        return getRoman("M", "", "", thousands) +
+                getRoman("C", "D", "M", hundreds) +
+                getRoman("X", "L", "C", tens) +
+                getRoman("I", "V", "X", ones);
+
+    }
+    //==================================================================================================================
+
+    //------------------------------------------------------------------------------------------------------------------
+    //13. Roman to Integer
+    //Accept(beats 77.45%)
+    private int getIntFromRoman(char roman){
+        switch (roman){
+            case 'I':
+                return 1;
+            case 'V':
+                return 5;
+            case 'X':
+                return 10;
+            case 'L':
+                return 50;
+            case 'C':
+                return 100;
+            case 'D':
+                return 500;
+            case 'M':
+                return 1000;
+            default:
+                return -1;
+        }
+    }
+    public int romanToInt(String s) {
+        int v, vn, sum = 0;
+        final int len = s.length();
+        vn = getIntFromRoman(s.charAt(0));
+        for(int i = 0; i < len - 1; i++){
+            v = vn;
+            vn = getIntFromRoman(s.charAt(i + 1));
+            sum += v < vn ? -v : v;
+        }
+        sum += getIntFromRoman(s.charAt(len - 1));
+        return sum;
+    }
+    //==================================================================================================================
+
+    //------------------------------------------------------------------------------------------------------------------
+    //14. Longest Common Prefix
+    //Accept(beats 53.24%)采用二分法
+    //最优解使用indexof函数，先看前两个的公共开头，再加第三个，以此类推。对比开头，从strs[0]的最后开始向前判断。（感觉从后向前不如二分法）
+    private boolean sameSubstrings(String[] strs, int begin, int back){//长度>=2
+        String eq = strs[0].substring(begin, back);
+        for (String str : strs) {
+            if (!eq.equals(str.substring(begin, back))) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public String longestCommonPrefix(String[] strs) {
+        int strAmount = strs.length;
+        switch (strAmount){
+            case 0:
+                return "";
+            case 1:
+                return strs[0];
+            default:
+                String common = "";
+                int minLen = strs[0].length();
+                for(int i = 1; i < strAmount; i++){
+                    int len = strs[i].length();
+                    minLen = minLen < len ? minLen : len;
+                }
+                if(minLen == 0){
+                    return "";
+                }
+                int begin = 0, back = minLen;
+                while (back > begin + 1){
+                    int mid = (begin + back) / 2;
+                    if(sameSubstrings(strs, begin, mid)){
+                        begin = mid;
+                    }
+                    else{
+                        back = mid;
+                    }
+                }
+                return sameSubstrings(strs, begin, back) ? strs[0].substring(0, begin + 1) : strs[0].substring(0, begin);
+        }
+    }
+    //==================================================================================================================
 
     //------------------------------------------------------------------------------------------------------------------
     //15. 3Sum
-    //Time Limit Exceeded
+    //尚未解决
+    //快速排序
+    private int getKeyForQuickSort(int[] arr, int start, int end){
+        int a = arr[start];
+        int b = arr[(start + end) / 2];
+        int c = arr[end - 1];
+        if(a > b){
+            int t = a;
+            a = b;
+            b = t;
+        }
+        if(c < a){
+            return a;
+        }
+        else if(c > b){
+            return b;
+        }
+        else {
+            return c;
+        }
+    }
+    //引用函数getKeyForQuickSort
+    private int[] quickSort(int[] arr){
+        int len = arr.length;
+        if(len < 2){
+            return arr;
+        }
+        else if(len == 2){
+            int a = arr[0];
+            int b = arr[1];
+            arr[0] = Math.min(a, b);
+            arr[1] = Math.max(a, b);
+            return arr;
+        }
+        else if(len == 3){
+            int[] r = new int[3];
+            int a = arr[0];
+            int b = arr[1];
+            int c = arr[2];
+            if(a > b){
+                int t = a;
+                a = b;
+                b = t;
+            }
+            if(c < b){
+                int t = c;
+                c = b;
+                b = t;
+            }
+            if(a > b){
+                int t = a;
+                a = b;
+                b = t;
+            }
+            r[0] = a;
+            r[1] = b;
+            r[2] = c;
+            return r;
+        }
+        boolean allValueTheSame = true;
+        for (int d :
+                arr) {
+            if(d != arr[0]){
+                allValueTheSame = false;
+                break;
+            }
+        }
+        if (allValueTheSame){
+            return arr;
+        }
+        int frontIndex = 0;
+        int backIndex = len - 1;
+        int key = getKeyForQuickSort(arr, frontIndex, backIndex + 1);
+//        MyPrint.myPrint("key : " + key);
+        int f = frontIndex, b = backIndex;
+        while (f <= backIndex){
+            if(arr[f] <= key){
+                if(arr[f] == key && frontIndex !=0){
+                    f++;
+                    continue;
+                }
+                int temp = arr[f];
+                arr[f] = arr[frontIndex];
+                arr[frontIndex] = temp;
+                frontIndex++;
+            }
+            f++;
+        }
+        while (b >= frontIndex){
+            if(arr[b] >= key){
+                int temp = arr[b];
+                arr[b] = arr[backIndex];
+                arr[backIndex] = temp;
+                backIndex--;
+            }
+            b--;
+        }
+        int[] a0 = Arrays.copyOfRange(arr, 0, frontIndex);
+        int[] a1 = Arrays.copyOfRange(arr, frontIndex, arr.length);
+
+
+        int[] a00 = quickSort(a0);
+        int[] a11 = quickSort(a1);
+        int[] result = new int[arr.length];
+        System.arraycopy(a00, 0, result, 0, a00.length);
+        System.arraycopy(a11, 0, result, a00.length, a11.length);
+        return result;
+    }
+    private List<Integer> buildGroup(int a, int b, int c){
+        List<Integer> list = new ArrayList<>(3);
+        list.add(a);
+        list.add(b);
+        list.add(c);
+        return list;
+    }
     public List<List<Integer>> threeSum(int[] nums) {
-        throw new UnsupportedOperationException("This function has not been finished!");
+        Set<List<Integer>> setList = new HashSet<>();
+        nums = quickSort(nums);
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int n :
+                nums) {
+            arrayList.add(n);
+        }
+        int len = nums.length;
+        for(int i = 0; i < len  - 1; i++){
+            for(int j = i + 1; j < len - 1; i++){
+                int a = arrayList.get(i);
+                int b = arrayList.get(j);
+                Outputs.output(arrayList.indexOf(0-a-b));
+            }
+        }
+        List<List<Integer>> listList = new ArrayList<>();
+        listList.addAll(setList);
+        return listList;
     }
     //==================================================================================================================
 
