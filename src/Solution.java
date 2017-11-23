@@ -523,7 +523,7 @@ public class Solution {
             return c;
         }
     }
-    //引用函数getKeyForQuickSort
+    //引用函数getKeyForQuickSortp
     private int[] quickSort(int[] arr){
         int len = arr.length;
         if(len < 2){

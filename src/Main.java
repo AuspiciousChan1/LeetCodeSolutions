@@ -1,9 +1,19 @@
+import jdk.management.resource.internal.inst.DatagramDispatcherRMHooks;
+import utils.DataGenerator;
 import utils.Outputs;
+import utils.Search;
+import utils.Sort;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int nums[] = {-14,-3,11,-3,12,-1,11,13,5,6,-11,-14,-6,11,-4,-15,3,-15,9,-10,13,-10,-9,-13,-12,12,-7,12,12,3,9,5,-14,-3,9,13,11,5,3,-6,-12,-1,-5,-3,-4,-2,-10,6,-10,14,3,-11,11,10,-9,7,-1,-9,4,-12,2,-2,8,3,3,-6,-7,-1,6,12,8,9,-12,10,-8,-1,-7,-3,12,-9,-12,1,-5,6,-12,-7,-2,2,-8,-13,5,9,-7,-10,-3,11,-1,-3,-13,-10,-14,11,6,-10,6,13,4,7,-13,-6,13,12,10,-15,4,13,-7,9,-8,0,4,4,-6,12,9,-2,0};
-        Outputs.output(solution.threeSum(nums));
+        ArrayList<Double> arrayList = DataGenerator.randomArrayList(100);
+        arrayList = (ArrayList<Double>) Sort.quickSort(arrayList);
+        Outputs.outputln(Sort.isOrdered(arrayList));
+        Outputs.outputList(arrayList, " ");
+        Outputs.output(Search.binsearch(arrayList, arrayList.get(50)));
+
     }
 }

@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class DataGenerator {
@@ -21,5 +22,13 @@ public class DataGenerator {
         return linkedList;
     }
 
+    //生成随机ArrayList
+    public static ArrayList<Double> randomArrayList(int size){
+        ArrayList<Double> arrayList = new ArrayList<>(size);
+        for(int i = 0; i < size; i++){
+            arrayList.add(Math.random());
+        }
+        return arrayList;
+    }
 
 }

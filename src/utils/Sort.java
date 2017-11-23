@@ -71,7 +71,7 @@ public class Sort {
         }
     }
     //引用函数getKeyForQuickSort
-    public static List<Double> quickSort(List<Double> l){
+    public static ArrayList<Double> quickSort(ArrayList<Double> l){
         int len = l.size();
         if(len < 2){
             return l;
@@ -85,7 +85,7 @@ public class Sort {
             return l;
         }
         else if(len == 3){
-            List<Double> r = new ArrayList<>();
+            ArrayList<Double> r = new ArrayList<>();
             double a = l.get(0);
             double b = l.get(1);
             double c = l.get(2);
@@ -147,20 +147,12 @@ public class Sort {
             }
             b--;
         }
-        List<Double> l0 = l.subList(0, frontIndex);
-        /*List<Double> l0 = new ArrayList<>();
-        Iterator<Double> iterator = l.iterator();
-        for(int i = 0; i < frontIndex; i++){
-            l0.add(iterator.next());
-        }*/
-        List<Double> l1 = l.subList(frontIndex, l.size());
-        /*List<Double> l1 = new ArrayList<>();
-        while (iterator.hasNext()){
-            l1.add(iterator.next());
-        }*/
-        List<Double> l00 = quickSort(l0);
-        List<Double> l11 = quickSort(l1);
-        List<Double> result = new ArrayList<>();
+        ArrayList<Double> l0 = new ArrayList<>(l.subList(0, frontIndex)) ;
+        ArrayList<Double> l1 = new ArrayList<>(l.subList(frontIndex, l.size()));
+
+        ArrayList<Double> l00 = quickSort(l0);
+        ArrayList<Double> l11 = quickSort(l1);
+        ArrayList<Double> result = new ArrayList<>();
 
         result.addAll(l00);
         result.addAll(l11);

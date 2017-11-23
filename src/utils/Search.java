@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,7 +31,8 @@ public class Search {
 
     //二分法查找，如果找到，则返回对应的index，否则，返回的值为如果target在列表中，它所对应的index。
     //预期使用要求：列表为从小到大有序。
-    public static int binsearch(List<Double> l, double target){
+
+    public static int binsearch0(ArrayList<Double> l, double target){
         int start = 0;
         int end = l.size();
         while (end - start > 0){
@@ -50,9 +52,48 @@ public class Search {
             catch (IndexOutOfBoundsException e){
 
             }
-
-            l = l.subList(start, end);
+            l = (ArrayList<Double>) l.subList(start, end);
         }
         return start;
+    }
+
+    //优点：思路简单。缺点：中间数不会被删掉。
+    public static int binsearch(ArrayList<Double> l, double target){
+        if(l != null){
+            switch (l.size()){
+                case 0:
+                    return 0;
+                case 1:
+                    return target > l.get(0) ? 1 : 0;
+                default:
+                    int begin = 0;
+                    int end = l.size() - 1;
+                    while(end - begin != 1){
+                        int mid = (begin + end) / 2;
+                        if(target == l.get(mid)){
+                            return mid;
+                        }
+                        else if(target > l.get(mid)){
+                            begin = mid;
+                        }
+                        else {
+                            end = mid;
+                        }
+                    }
+                    if(target <= l.get(begin)){
+                        return begin;
+                    }
+                    else if(target <= l.get(end)){
+                        return end;
+                    }
+                    else {
+                        return end + 1;
+                    }
+            }
+
+        }
+        else{
+            return -1;
+        }
     }
 }
