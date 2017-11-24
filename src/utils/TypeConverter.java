@@ -14,11 +14,11 @@ public class TypeConverter {
         return integerList;
     }
 
-    public static List<Double> IntegerList_To_DoubleList(List<Integer> integerList){
+    public static List<Double> IntegerList_To_DoubleArrayList(List<Integer> integerList){
         List<Double> doubleList = new ArrayList<>();
         for (int k :
                 integerList) {
-            doubleList.add((double)k);
+            doubleList.add((double) k);
         }
         return doubleList;
     }

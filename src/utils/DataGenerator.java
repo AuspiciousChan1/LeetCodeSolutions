@@ -31,4 +31,13 @@ public class DataGenerator {
         return arrayList;
     }
 
+    //生成随机ArrayList
+    public static ArrayList<Double> sortedRandomArrayList(int size){
+        ArrayList<Double> arrayList = new ArrayList<>(size);
+        arrayList.add(Math.random());
+        for(int i = 1; i < size; i++){
+            arrayList.add(Math.random() + arrayList.get(i - 1));
+        }
+        return arrayList;
+    }
 }
