@@ -1,10 +1,8 @@
 package utils;
 
 import MyTypes.Graphs.Graph;
-import MyTypes.Graphs.MyGraph;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.LinkedList;
 
 public class DataGenerator {
@@ -46,10 +44,6 @@ public class DataGenerator {
     }
 
     public static Graph generatorPetersonGraph() {
-        MyGraph myGraph = new MyGraph();
-        ArrayList<String> nodesId = new ArrayList<>(10);
-
-        nodesId.add(myGraph.addNode(null, null));
         return null;
     }
 }
